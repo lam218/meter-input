@@ -1,40 +1,35 @@
 <template>
-  <div class="hello">
-    <h1>{{ msg }}</h1>
-    <p>
-      For a guide and recipes on how to configure / customize this project,<br>
-      check out the
-      <a href="https://cli.vuejs.org" target="_blank" rel="noopener">vue-cli documentation</a>.
-    </p>
-    <h3>Installed CLI Plugins</h3>
-    <ul>
-      <li><a href="https://github.com/vuejs/vue-cli/tree/dev/packages/%40vue/cli-plugin-babel" target="_blank" rel="noopener">babel</a></li>
-      <li><a href="https://github.com/vuejs/vue-cli/tree/dev/packages/%40vue/cli-plugin-eslint" target="_blank" rel="noopener">eslint</a></li>
-    </ul>
-    <h3>Essential Links</h3>
-    <ul>
-      <li><a href="https://vuejs.org" target="_blank" rel="noopener">Core Docs</a></li>
-      <li><a href="https://forum.vuejs.org" target="_blank" rel="noopener">Forum</a></li>
-      <li><a href="https://chat.vuejs.org" target="_blank" rel="noopener">Community Chat</a></li>
-      <li><a href="https://twitter.com/vuejs" target="_blank" rel="noopener">Twitter</a></li>
-      <li><a href="https://news.vuejs.org" target="_blank" rel="noopener">News</a></li>
-    </ul>
-    <h3>Ecosystem</h3>
-    <ul>
-      <li><a href="https://router.vuejs.org" target="_blank" rel="noopener">vue-router</a></li>
-      <li><a href="https://vuex.vuejs.org" target="_blank" rel="noopener">vuex</a></li>
-      <li><a href="https://github.com/vuejs/vue-devtools#vue-devtools" target="_blank" rel="noopener">vue-devtools</a></li>
-      <li><a href="https://vue-loader.vuejs.org" target="_blank" rel="noopener">vue-loader</a></li>
-      <li><a href="https://github.com/vuejs/awesome-vue" target="_blank" rel="noopener">awesome-vue</a></li>
-    </ul>
+  <div class="app">
+   <h1>Seperate inputs</h1>
+   <p>Seperate inputs, so that when you click in the first field it fills up from the right and then hops accross</p>
+   <p>I think it is unnecessary to have a display and input option, also inputting the 'wrong' way</p>
+   <seperate-inputs></seperate-inputs>
+   <h1>One input</h1>
+   <p>Clicking on the 'meter reading' gives you an input to type into, 'submitting' updates 'meter reading'</p>
+   <p>A lot more faff than its worth, to get the input to colour the characters after the point, need to hide an input and put span on top</p>
+   <one-input></one-input>
+   <h1>Left to Right</h1>
+   <p>Fills in like a calculator</p>
+   <p>Feels best to use, when chatting to Justin, the red numbers aren't required. So no need to include them</p>
+   <p>Only question is, is it self explanatory to use?</p>
+   <left-to-right></left-to-right>
   </div>
 </template>
 
 <script>
+import SeperateInputs from './SeperateInputs';
+import OneInput from './OneInput';
+import LeftToRight from './LeftToRight';
+
 export default {
   name: 'HelloWorld',
   props: {
     msg: String
+  },
+  components: {
+    SeperateInputs,
+    OneInput,
+    LeftToRight
   }
 }
 </script>
