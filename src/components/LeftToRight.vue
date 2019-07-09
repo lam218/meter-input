@@ -102,7 +102,7 @@ export default {
 </script>
 
 <style>
-@import url("https://fonts.googleapis.com/css?family=Open+Sans:300&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Open+Sans:300,Open+Sans:600&display=swap");
 
 .input-container {
   display: flex;
