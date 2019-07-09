@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="outer-container">
     <transition name="input" mode="out-in">
       <div class="value-container" v-if="!showInput">
         <div
@@ -32,7 +32,7 @@
             autofocus
           />
         </div>
-        <button v-on:click="toggleInput(false)">Done</button>
+        <button class="input-container__button" v-on:click="toggleInput(false)">Done</button>
         <p v-if="showError">Have you remembered the leading zeros, you should have 8 numbers</p>
       </div>
     </transition>
@@ -90,8 +90,10 @@ export default {
       this.inputValue = value;
       if (value.length === 5) {
         this.displayValue = `${value}<span style="color: red">.</span>`;
-      } else if (value.length > 5) {
+      } else if (value.length > 5 && e.data !== null) {
         this.displayValue = `${this.displayValue}<span style="color: red">${e.data}</span>`;
+      } else if (value.length > 5 && e.data === null) {
+        this.displayValue = this.displayValue.slice(0, -33);
       } else {
         this.displayValue = value;
       }
@@ -118,6 +120,9 @@ export default {
 </script>
 
 <style scoped>
+.outer-container {
+  position: relative;
+}
 .input-container__input--focus {
   border: 1px solid blue;
 }
@@ -126,6 +131,20 @@ export default {
   width: 50%;
   height: 60px;
 }
+.input-container__button {
+  font-size: 25px;
+  background: blue;
+  border: none;
+  border-radius: 4px;
+  padding: 10px 20px;
+  color: white;
+  font-family: Open Sans, sans-serif;
+  position: absolute;
+  top: 30%;
+  z-index: 2;
+  right: 40px;
+  cursor: pointer;
+}
 .input-container__hidden-input {
   padding: 10px;
   line-height: 25px;
@@ -133,6 +152,7 @@ export default {
   width: 100%;
   position: absolute;
   opacity: 0;
+  z-index: 1;
 }
 
 .input-container__input--red {
@@ -144,8 +164,9 @@ export default {
 .red {
   color: red;
 }
-.input-enter-active, .input-leave-active {
-  transition: all .5s;
+.input-enter-active,
+.input-leave-active {
+  transition: all 0.5s;
   transform: translateY(0);
 }
 .input-enter, .input-leave-to /* .fade-leave-active below version 2.1.8 */ {
