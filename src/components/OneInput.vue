@@ -1,29 +1,41 @@
 <template>
   <div>
-    <div class="value-container" v-if="!showInput">
-      <div
-        class="value"
-        v-bind:class="{'value--red': i > 4}"
-        v-for="(item, i) in meterValue"
-        v-bind:key="item.key"
-        v-on:click="toggleInput(true)"
-      >{{item.value}}
-      <span v-if="i === 4">.</span>
+    <transition name="input" mode="out-in">
+      <div class="value-container" v-if="!showInput">
+        <div
+          class="value"
+          v-bind:class="{'value--red': i > 4}"
+          v-for="(item, i) in meterValue"
+          v-bind:key="item.key"
+          v-on:click="toggleInput(true)"
+        >
+          {{item.value}}
+          <span v-if="i === 4">.</span>
+        </div>
       </div>
-    </div>
-    <div v-if="showInput">
-      <div class="input-container">
-        <span class="input-container__input" v-html="displayValue"></span>
-        <input
-          class="input-container__hidden-input"
-          v-bind:value="inputValue"
-          v-on:input="onChange"
-          maxlength="8"
-        />
+    </transition>
+    <transition name="input" mode="out-in">
+      <div v-if="showInput">
+        <div class="input-container">
+          <span
+            class="input-container__input"
+            v-html="displayValue"
+            v-bind:class="{'input-container__input--focus': showInput}"
+          ></span>
+          <input
+            class="input-container__hidden-input"
+            type="number"
+            v-bind:value="inputValue"
+            v-on:input="onChange"
+            max="99999999"
+            ref="input"
+            autofocus
+          />
+        </div>
+        <button v-on:click="toggleInput(false)">Done</button>
+        <p v-if="showError">Have you remembered the leading zeros, you should have 8 numbers</p>
       </div>
-      <button v-on:click="toggleInput(false)">Done</button>
-      <p v-if="showError ">Have you remembered the leading zeros, you should have 8 numbers</p>
-    </div>
+    </transition>
   </div>
 </template>
 
@@ -74,16 +86,14 @@ export default {
   },
   methods: {
     onChange: function(e) {
-      if (!isNaN(parseInt(e.data))) {
-        const value = e.target.value;
-        this.inputValue = value;
-        if (value.length === 5) {
-          this.displayValue = `${value}<span style="color: red">.</span>`;
-        } else if (value.length > 5) {
-          this.displayValue = `${this.displayValue}<span style="color: red">${e.data}</span>`;
-        } else {
-          this.displayValue = value;
-        }
+      const value = e.target.value;
+      this.inputValue = value;
+      if (value.length === 5) {
+        this.displayValue = `${value}<span style="color: red">.</span>`;
+      } else if (value.length > 5) {
+        this.displayValue = `${this.displayValue}<span style="color: red">${e.data}</span>`;
+      } else {
+        this.displayValue = value;
       }
     },
     toggleInput: function(shouldShowInput) {
@@ -95,15 +105,22 @@ export default {
         this.showInput = shouldShowInput;
       } else if (shouldShowInput) {
         this.showInput = shouldShowInput;
+        setTimeout(this.setFocus, 200);
       } else {
         this.showError = true;
       }
+    },
+    setFocus: function() {
+      this.$refs.input.focus();
     }
   }
 };
 </script>
 
 <style scoped>
+.input-container__input--focus {
+  border: 1px solid blue;
+}
 .input-container__input {
   background: white;
   width: 50%;
@@ -126,5 +143,13 @@ export default {
 }
 .red {
   color: red;
+}
+.input-enter-active, .input-leave-active {
+  transition: all .5s;
+  transform: translateY(0);
+}
+.input-enter, .input-leave-to /* .fade-leave-active below version 2.1.8 */ {
+  opacity: 0;
+  transform: translateY(-30px);
 }
 </style>
