@@ -1,22 +1,22 @@
 <template>
   <div>
     <div class="link-container">
-      <h2>Hovering on the whole panel does the animation</h2>
+      <h2>Hovering on the whole panel does the animation and does it infinitely</h2>
       <div class="link">
         <p
           class="link__text"
         >Vestibulum id ligula porta felis euismod semper. Donec id elit non mi porta gravida at eget metus. Donec ullamcorper nulla non metus auctor fringilla. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
         <div class="box-diagonal">
-          <svg viewBox="0 0 32 32" height="16px" width="16px">
+          <svg viewBox="0 0 32 32" height="32px" width="32px">
             <path
-              d="M12.4536518,8.69541757 C11.8487827,8.07880352 11.8487827,7.0790746 12.4536518,6.46246054 C13.0585208,5.84584649 14.0392073,5.84584649 14.6440763,6.46246054 L24,16.0000526 L14.6441796,25.5375395 C14.0393105,26.1541535 13.0586241,26.1541535 12.453755,25.5375395 C11.848886,24.9209254 11.848886,23.9211965 12.453755,23.3045824 L19.619151,16.0000526 L12.4536518,8.69541757 Z"
+              d="M12.70725,15.293 C12.31625,14.902 11.68425,14.902 11.29325,15.293 C10.90225,15.684 10.90225,16.316 11.29325,16.707 L15.29325,20.707 C15.48825,20.902 15.74425,21 16.00025,21 C16.25625,21 16.51225,20.902 16.70725,20.707 L20.70725,16.707 C21.09825,16.316 21.09825,15.684 20.70725,15.293 C20.31625,14.902 19.68425,14.902 19.29325,15.293 L17.00025,17.586 L17.00025,12 C17.00025,11.448 16.55325,11 16.00025,11 C15.44725,11 15.00025,11.448 15.00025,12 L15.00025,17.586 L12.70725,15.293 Z"
             />
           </svg>
         </div>
       </div>
     </div>
     <div class="form-container">
-      <h2>Hovering on the whole panel does the animation</h2>
+      <h2>Hovering on the whole panel does the animation just three times</h2>
       <div class="form">
         <p class="form__label">Self Service form</p>
         <div class="form__info">
@@ -25,9 +25,9 @@
             <p>Lorem ipsum dolar sit amet lorem ipsum dolar sit amet.</p>
           </div>
           <div class="box-sideways">
-            <svg viewBox="0 0 32 32" height="16px" width="16px">
+            <svg viewBox="0 0 32 32" height="32px" width="32px">
               <path
-                d="M12.4536518,8.69541757 C11.8487827,8.07880352 11.8487827,7.0790746 12.4536518,6.46246054 C13.0585208,5.84584649 14.0392073,5.84584649 14.6440763,6.46246054 L24,16.0000526 L14.6441796,25.5375395 C14.0393105,26.1541535 13.0586241,26.1541535 12.453755,25.5375395 C11.848886,24.9209254 11.848886,23.9211965 12.453755,23.3045824 L19.619151,16.0000526 L12.4536518,8.69541757 Z"
+                d="M12.70725,15.293 C12.31625,14.902 11.68425,14.902 11.29325,15.293 C10.90225,15.684 10.90225,16.316 11.29325,16.707 L15.29325,20.707 C15.48825,20.902 15.74425,21 16.00025,21 C16.25625,21 16.51225,20.902 16.70725,20.707 L20.70725,16.707 C21.09825,16.316 21.09825,15.684 20.70725,15.293 C20.31625,14.902 19.68425,14.902 19.29325,15.293 L17.00025,17.586 L17.00025,12 C17.00025,11.448 16.55325,11 16.00025,11 C15.44725,11 15.00025,11.448 15.00025,12 L15.00025,17.586 L12.70725,15.293 Z"
               />
             </svg>
           </div>
@@ -47,9 +47,9 @@
           <div class="download__download">
             <p>PDF, 249kb</p>
             <div class="box-down">
-              <svg viewBox="0 0 32 32" height="16px" width="16px">
+              <svg viewBox="0 0 32 32" height="32px" width="32px">
                 <path
-                  d="M12.4536518,8.69541757 C11.8487827,8.07880352 11.8487827,7.0790746 12.4536518,6.46246054 C13.0585208,5.84584649 14.0392073,5.84584649 14.6440763,6.46246054 L24,16.0000526 L14.6441796,25.5375395 C14.0393105,26.1541535 13.0586241,26.1541535 12.453755,25.5375395 C11.848886,24.9209254 11.848886,23.9211965 12.453755,23.3045824 L19.619151,16.0000526 L12.4536518,8.69541757 Z"
+                  d="M12.70725,15.293 C12.31625,14.902 11.68425,14.902 11.29325,15.293 C10.90225,15.684 10.90225,16.316 11.29325,16.707 L15.29325,20.707 C15.48825,20.902 15.74425,21 16.00025,21 C16.25625,21 16.51225,20.902 16.70725,20.707 L20.70725,16.707 C21.09825,16.316 21.09825,15.684 20.70725,15.293 C20.31625,14.902 19.68425,14.902 19.29325,15.293 L17.00025,17.586 L17.00025,12 C17.00025,11.448 16.55325,11 16.00025,11 C15.44725,11 15.00025,11.448 15.00025,12 L15.00025,17.586 L12.70725,15.293 Z"
                 />
               </svg>
             </div>
@@ -71,9 +71,9 @@
           <div class="download__download">
             <p>PDF, 249kb</p>
             <div class="box-down">
-              <svg viewBox="0 0 32 32" height="16px" width="16px">
+              <svg viewBox="0 0 32 32" height="32px" width="32px">
                 <path
-                  d="M12.4536518,8.69541757 C11.8487827,8.07880352 11.8487827,7.0790746 12.4536518,6.46246054 C13.0585208,5.84584649 14.0392073,5.84584649 14.6440763,6.46246054 L24,16.0000526 L14.6441796,25.5375395 C14.0393105,26.1541535 13.0586241,26.1541535 12.453755,25.5375395 C11.848886,24.9209254 11.848886,23.9211965 12.453755,23.3045824 L19.619151,16.0000526 L12.4536518,8.69541757 Z"
+                  d="M12.70725,15.293 C12.31625,14.902 11.68425,14.902 11.29325,15.293 C10.90225,15.684 10.90225,16.316 11.29325,16.707 L15.29325,20.707 C15.48825,20.902 15.74425,21 16.00025,21 C16.25625,21 16.51225,20.902 16.70725,20.707 L20.70725,16.707 C21.09825,16.316 21.09825,15.684 20.70725,15.293 C20.31625,14.902 19.68425,14.902 19.29325,15.293 L17.00025,17.586 L17.00025,12 C17.00025,11.448 16.55325,11 16.00025,11 C15.44725,11 15.00025,11.448 15.00025,12 L15.00025,17.586 L12.70725,15.293 Z"
                 />
               </svg>
             </div>
@@ -112,7 +112,7 @@ export default {
   }
   &:hover {
     svg {
-      animation: moveArrowDiagonal 1s ease-in-out;
+      animation: moveArrowDiagonal 1s ease-in-out infinite;
     }
   }
 }
@@ -127,25 +127,25 @@ export default {
     position: absolute;
     top: 0;
     right: 0;
-    transform: translateY(0) translateX(0) rotate(-45deg);
+    transform: translateY(0) translateX(0) rotate(-145deg);
   }
 }
 
 @keyframes moveArrowDiagonal {
   0% {
-    transform: translateY(0) translateX(0) rotate(-45deg);
+    transform: translateY(0) translateX(0) rotate(-145deg);
   }
   30% {
-    transform: translateY(-30px) translateX(30px) rotate(-45deg);
+    transform: translateY(-30px) translateX(30px) rotate(-145deg);
     opacity: 0;
   }
   35% {
     opacity: 0;
-    transform: translateY(30px) translateX(-30px) rotate(-45deg);
+    transform: translateY(30px) translateX(-30px) rotate(-145deg);
   }
   100% {
     opacity: 1;
-    transform: translateY(0) translateX(0) rotate(-45deg);
+    transform: translateY(0) translateX(0) rotate(-145deg);
   }
 }
 .form-container {
@@ -180,7 +180,7 @@ export default {
   }
   &:hover {
     svg {
-      animation: moveArrowSideways 1s ease-in-out;
+      animation: moveArrowSideways 1s ease-in-out 3;
     }
   }
 }
@@ -195,27 +195,26 @@ export default {
   svg {
     fill: white;
     position: absolute;
-    top: 8px;
-    right: 8px;
-    transform: translateY(0) translateX(0);
+    right: 0;
+    transform: translateX(0) rotate(-90deg);
   }
 }
 
 @keyframes moveArrowSideways {
   0% {
-    transform: translateX(0);
+    transform: translateX(0) rotate(-90deg);
   }
   30% {
-    transform: translateX(30px);
+    transform: translateX(30px) rotate(-90deg);
     opacity: 0;
   }
   35% {
     opacity: 0;
-    transform: translateX(-30px);
+    transform: translateX(-30px) rotate(-90deg);
   }
   100% {
     opacity: 1;
-    transform: translateX(0);
+    transform: translateX(0) rotate(-90deg);
   }
 }
 .download-container {
@@ -279,27 +278,25 @@ export default {
   svg {
     fill: white;
     position: absolute;
-    top: 8px;
-    right: 8px;
-    transform: translateY(0) rotate(90deg);
+    transform: translateY(0);
   }
 }
 
 @keyframes moveArrowDown {
   0% {
-    transform: translateY(0) rotate(90deg);
+    transform: translateY(0);
   }
   30% {
-    transform: translateY(30px) rotate(90deg);
+    transform: translateY(30px);
     opacity: 0;
   }
   35% {
     opacity: 0;
-    transform: translateY(-30px) rotate(90deg);
+    transform: translateY(-30px);
   }
   100% {
     opacity: 1;
-    transform: translateY(0) rotate(90deg);
+    transform: translateY(0);
   }
 }
 </style>

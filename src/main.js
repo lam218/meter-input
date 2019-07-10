@@ -2,6 +2,7 @@ import Vue from "vue";
 import VueRouter from "vue-router";
 import HelloWorld from "./components/HelloWorld.vue";
 import Arrows from "./components/Arrows.vue";
+import Animations from './components/MoreAnimations.vue';
 import App from "./App.vue";
 
 Vue.config.productionTip = false;
@@ -12,6 +13,10 @@ const routes = [
   {
     path: "/arrows",
     component: Arrows
+  },
+  {
+    path: "/animations",
+    component: Animations
   },
   { path: "/meter-reading", component: HelloWorld }
 ];
