@@ -2,6 +2,7 @@
   <div class="outer-container">
     <div>
       <h2>Location pin</h2>
+      <p>Animated like Queen's wave, repeated twice</p>
       <svg class="location" height="64px" width="64px" viewBox="0 0 64px 64px">
         <path
           d="M14.2913322,32 C9.89133223,32 5.41833223,35.492 4.35133223,39.761 L0.231332227,56.239 C-0.835667773,60.508 1.89133223,64 6.29133223,64 L57.7093322,64 C62.1083322,64 64.8363322,60.508 63.7693322,56.239 L59.6493322,39.761 C58.5823322,35.492 54.1083322,32 49.7093322,32 L14.2913322,32 Z"
@@ -17,6 +18,7 @@
     </div>
     <div>
       <h2>Submit meter reading</h2>
+      <p>One cycle</p>
       <svg class="meter" height="64px" width="64px" viewBox="0 0 64px 64px">
         <g fill="#8ABD43" opacity="0.2">
           <circle id="Oval" cx="32" cy="32" r="32" class="meter__circle" />
@@ -91,6 +93,7 @@
     </div>
     <div>
       <h2>Issue</h2>
+      <p>Repeated 3 times</p>
       <svg class="warning" height="90px" width="90px" viewBox="0 0 90px 90px">
         <g
           xmlns="http://www.w3.org/2000/svg"
@@ -130,6 +133,7 @@ export default {
 
 <style scoped  lang="scss">
 .location {
+  cursor: pointer;
   height: 100px;
   &__pointer {
     transform: translateY(10px);
@@ -151,6 +155,7 @@ export default {
 }
 
 .meter {
+  cursor: pointer;
   &:hover {
     .meter__rect1 {
       animation: slideUp 0.2s;
@@ -192,6 +197,7 @@ export default {
 }
 
 .warning {
+  cursor: pointer;
   &__triangle {
     transform: translate(15px, 12.5px);
   }
