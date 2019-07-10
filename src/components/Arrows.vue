@@ -111,6 +111,9 @@ export default {
     text-align: left;
   }
   &:hover {
+    .box-diagonal {
+      background: #65858f;
+    }
     svg {
       animation: moveArrowDiagonal 1s ease-in-out infinite;
     }
@@ -122,6 +125,7 @@ export default {
   background: #b2c2c7;
   position: relative;
   overflow: hidden;
+  transition: all 0.2s ease-in-out;
   svg {
     fill: white;
     position: absolute;
@@ -179,6 +183,9 @@ export default {
     text-align: left;
   }
   &:hover {
+    .box-sideways {
+      background: #65858f;
+    }
     svg {
       animation: moveArrowSideways 1s ease-in-out 3;
     }
@@ -192,6 +199,7 @@ export default {
   background: #b2c2c7;
   position: relative;
   overflow: hidden;
+  transition: all 0.2s ease-in-out;
   svg {
     fill: white;
     position: absolute;
@@ -231,6 +239,9 @@ export default {
   margin: auto;
 
   &:hover {
+    .box-down {
+      background: #65858f;
+    }
     svg {
       animation: moveArrowDown 1s ease-in-out;
     }
@@ -255,6 +266,9 @@ export default {
 .download--hover {
   cursor: default;
   &:hover {
+    .box-down {
+      background: #65858f;
+    }
     svg {
       animation: none;
     }
@@ -262,6 +276,9 @@ export default {
   .download__download {
     cursor: pointer;
     &:hover {
+      .box-down {
+        background: #65858f;
+      }
       svg {
         animation: moveArrowDown 1s ease-in-out;
       }
@@ -275,6 +292,7 @@ export default {
   background: #b2c2c7;
   position: relative;
   overflow: hidden;
+  transition: all 0.2s ease-in-out;
   svg {
     fill: white;
     position: absolute;
