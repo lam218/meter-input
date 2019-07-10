@@ -219,6 +219,12 @@ export default {
 }
 
 .warning {
+    &__triangle{
+        transform: translateX(15px);
+    }
+    &__exclaim{
+        transform: translateX(15px);
+    }
   &:hover {
     .warning__triangle {
       animation: triangle 1s 2;
@@ -231,25 +237,25 @@ export default {
 
 @keyframes triangle {
   0% {
-    transform: scale(1);
+    transform: scale(1) translateX(15px);
   }
   50% {
-    transform: scale(1.5);
+    transform: scale(1.5) translateX(0);
   }
   100% {
-    transform: scale(1);
+    transform: scale(1) translateX(15px);
   }
 }
 
 @keyframes exclaim {
   0% {
-    transform: scale(1);
+    transform: scale(1) translateX(15px);
   }
   50% {
     transform: scale(0.5) translate(38px, 74px);
   }
   100% {
-    transform: scale(1);
+    transform: scale(1) translateX(15px);
   }
 }
 </style>
