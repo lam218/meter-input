@@ -91,7 +91,7 @@
     </div>
     <div>
       <h2>Issue</h2>
-      <svg class="warning"  height="90px" width="90px" viewBox="0 0 90px 90px">
+      <svg class="warning" height="90px" width="90px" viewBox="0 0 90px 90px">
         <g
           xmlns="http://www.w3.org/2000/svg"
           id="icon-/-large-/-issue"
@@ -145,35 +145,8 @@ export default {
 }
 
 @keyframes pointer {
-  0% {
-    transform: translateY(0);
-  }
-  67% {
+  50% {
     transform: scale(-0.5, 1) translate(-94px, 0);
-  }
-  68% {
-    transform: scale(-0.5, 1) translate(-94px, 0);
-    opacity: 1;
-  }
-  69% {
-    transform: scale(-0.5, 1) translate(-94px, 0);
-    opacity: 0;
-  }
-  71% {
-    transform: scale(-0.5, 1) translate(0, 0);
-    opacity: 0;
-  }
-  72% {
-    transform: scale(1, 1) translate(0, 0);
-    opacity: 0;
-  }
-  73% {
-    transform: scale(0.5, 1) translate(30px, 0);
-    opacity: 1;
-  }
-  100% {
-    transform: scaleY(1) scaleX(1) translateY(10px) translateX(0);
-    opacity: 1;
   }
 }
 
@@ -205,11 +178,11 @@ export default {
     transform: translateY(0);
   }
   49% {
-    transform: translateY(-30px);
+    transform: translateY(-25px);
     opacity: 0;
   }
   51% {
-    transform: translateY(30px);
+    transform: translateY(25px);
     opacity: 0;
   }
   100% {
@@ -219,43 +192,43 @@ export default {
 }
 
 .warning {
-    &__triangle{
-        transform: translateX(15px);
-    }
-    &__exclaim{
-        transform: translateX(15px);
-    }
+  &__triangle {
+    transform: translate(15px, 12.5px);
+  }
+  &__exclaim {
+    transform: translate(15px, 12.5px);
+  }
   &:hover {
     .warning__triangle {
-      animation: triangle 1s 2;
+      animation: triangle 1s 3;
     }
     .warning__exclaim {
-      animation: exclaim 1s 2;
+      animation: exclaim 1s 3;
     }
   }
 }
 
 @keyframes triangle {
   0% {
-    transform: scale(1) translateX(15px);
+    transform: scale(1) translate(15px, 12.5px);
   }
   50% {
     transform: scale(1.5) translateX(0);
   }
   100% {
-    transform: scale(1) translateX(15px);
+    transform: scale(1) translate(15px, 12.5px);
   }
 }
 
 @keyframes exclaim {
   0% {
-    transform: scale(1) translateX(15px);
+    transform: scale(1) translate(15px, 12.5px);
   }
   50% {
-    transform: scale(0.5) translate(38px, 74px);
+    transform: scale(0.8) translate(23px, 32px);
   }
   100% {
-    transform: scale(1) translateX(15px);
+    transform: scale(1) translate(15px, 12.5px);
   }
 }
 </style>
