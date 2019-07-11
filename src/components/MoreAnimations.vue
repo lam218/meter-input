@@ -164,16 +164,16 @@ export default {
       animation: slideUp 0.2s 0.1s;
     }
     .meter__rect3 {
-      animation: slideUp 0.2s 0.3s;
+      animation: slideUp 0.2s 0.2s;
     }
     .meter__rect4 {
-      animation: slideUp 0.2s 0.5s;
+      animation: slideUp 0.2s 0.3s;
     }
     .meter__rect5 {
-      animation: slideUp 0.2s 0.7s;
+      animation: slideUp 0.2s 0.4s;
     }
     .meter__rect6 {
-      animation: slideUp 0.2s 0.9s;
+      animation: slideUp 0.2s 0.5s;
     }
   }
 }
@@ -183,11 +183,11 @@ export default {
     transform: translateY(0);
   }
   49% {
-    transform: translateY(-25px);
+    transform: translateY(-20px);
     opacity: 0;
   }
   51% {
-    transform: translateY(25px);
+    transform: translateY(20px);
     opacity: 0;
   }
   100% {
