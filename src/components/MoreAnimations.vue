@@ -206,10 +206,10 @@ export default {
   }
   &:hover {
     .warning__triangle {
-      animation: triangle 1s 3;
+      animation: triangle 1s;
     }
     .warning__exclaim {
-      animation: exclaim 1s 3;
+      animation: exclaim 1s;
     }
   }
 }
