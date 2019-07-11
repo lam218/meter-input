@@ -161,19 +161,19 @@ export default {
       animation: slideUp 0.2s;
     }
     .meter__rect2 {
-      animation: slideUp 0.2s 0.2s;
+      animation: slideUp 0.2s 0.1s;
     }
     .meter__rect3 {
-      animation: slideUp 0.2s 0.4s;
+      animation: slideUp 0.2s 0.3s;
     }
     .meter__rect4 {
-      animation: slideUp 0.2s 0.6s;
+      animation: slideUp 0.2s 0.5s;
     }
     .meter__rect5 {
-      animation: slideUp 0.2s 0.8s;
+      animation: slideUp 0.2s 0.7s;
     }
     .meter__rect6 {
-      animation: slideUp 0.2s 1s;
+      animation: slideUp 0.2s 0.9s;
     }
   }
 }
