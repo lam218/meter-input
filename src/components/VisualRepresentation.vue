@@ -119,6 +119,7 @@ export default {
     color: #09333f;
     font-weight: 700;
     font-size: 16px;
+    padding-bottom: 10px;
   }
 }
 .input {
