@@ -2,12 +2,13 @@ import Vue from "vue";
 import VueRouter from "vue-router";
 import HelloWorld from "./components/HelloWorld.vue";
 import Arrows from "./components/Arrows.vue";
-import Animations from './components/MoreAnimations.vue';
+import Animations from "./components/MoreAnimations.vue";
+import MeterInputV2 from "./components/MeterInputV2.vue";
 import App from "./App.vue";
 
 Vue.config.productionTip = false;
 
-Vue.use(VueRouter)
+Vue.use(VueRouter);
 
 const routes = [
   {
@@ -18,7 +19,8 @@ const routes = [
     path: "/animations",
     component: Animations
   },
-  { path: "/meter-reading", component: HelloWorld }
+  { path: "/meter-reading", component: HelloWorld },
+  { path: "/meter-reading-v2", component: MeterInputV2 }
 ];
 const router = new VueRouter({
   routes
