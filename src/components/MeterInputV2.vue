@@ -2,6 +2,7 @@
   <div class="app">
    <h1>Update to input</h1>
    <p>In this one the input is above the visual representaion</p>
+   <p>Small fix to be made</p>
    <visual-rep></visual-rep>
    <h1>Just input with static after</h1>
    <input-with-static></input-with-static>
