@@ -2,17 +2,15 @@
   <div class="meter-reading">
     <div class="meter-reading__inner">
       <p class="meter-reading__explainer">Your meter should look a something like this</p>
-      <div class="value-container">
-        <div
-          class="value"
-          v-bind:class="[{'value--empty': i=== 5}, {'value--red': i > 5}]"
-          v-for="(item, i) in inputValue"
-          v-bind:key="i"
-        >{{item}}</div>
-      </div>
       <div class="input-container">
         <label class="input-container__label">Meter reading</label>
-        <input type="number" v-on:input="keydown" class="input" />
+        <div class="input-container__inner">
+          <input type="number" v-model="value" class="input" />
+          <div class="value value--empty">.</div>
+          <div class="value value--red">0</div>
+          <div class="value value--red">0</div>
+          <div class="value value--red">0</div>
+        </div>
       </div>
     </div>
   </div>
@@ -20,41 +18,12 @@
 
 <script>
 export default {
-  name: "visual-rep-reverse",
+  name: "input-with-static",
   data: function() {
     return {
-      inputValue: [0, 0, 0, 0, 0,  ".", 0, 0, 0],
+      value: "",
       isEditing: false
     };
-  },
-  methods: {
-    keydown(e) {
-      if (!isNaN(parseInt(e.data)) && this.inputValue[0] === 0) {
-        this.setValue(e);
-      } else if (e.data === null) {
-        this.removeValue(e);
-      } else {
-        e.target.value = e.target.value.substring(0, e.target.value.length - 1);
-        return;
-      }
-    },
-    setValue(e) {
-      if (this.isEditing) {
-        this.inputValue.shift();
-        this.inputValue.splice(4, 0, e.data);
-      } else {
-        this.inputValue[4] = e.data;
-        this.isEditing = true;
-      }
-    },
-    removeValue() {
-      if (this.isEditing) {
-        this.inputValue.unshift(0);
-        this.inputValue.splice(5, 1);
-      } else {
-        return;
-      }
-    }
   }
 };
 </script>
@@ -101,7 +70,7 @@ export default {
 }
 .value--red {
   color: #f15f56;
-  background: #F5F7F8;
+  background: #f5f7f8;
 }
 .value--empty {
   background: #ebeff1;
@@ -119,6 +88,9 @@ export default {
     font-weight: 700;
     font-size: 16px;
     padding-bottom: 10px;
+  }
+  &__inner {
+    display: flex;
   }
 }
 .input {
