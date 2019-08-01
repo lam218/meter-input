@@ -4,6 +4,7 @@ import HelloWorld from "./components/HelloWorld.vue";
 import Arrows from "./components/Arrows.vue";
 import Animations from "./components/MoreAnimations.vue";
 import MeterInputV2 from "./components/MeterInputV2.vue";
+import KeyActions from "./components/KeyActions.vue";
 import App from "./App.vue";
 
 Vue.config.productionTip = false;
@@ -20,7 +21,8 @@ const routes = [
     component: Animations
   },
   { path: "/meter-reading", component: HelloWorld },
-  { path: "/meter-reading-v2", component: MeterInputV2 }
+  { path: "/meter-reading-v2", component: MeterInputV2 },
+  { path: "/key-actions", component: KeyActions }
 ];
 const router = new VueRouter({
   routes
