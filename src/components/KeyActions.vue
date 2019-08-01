@@ -12,11 +12,20 @@
           v-bind:key="action.key">
             <div class="slide--content">
                 <img class="slide--image" :src="action.image" alt="image"/>
-                <h3 class="slide--title">
-                  <a class="slide--link" :href="action.link" @focus="activateSlide(action.key)">
-                    {{action.title}}
-                  </a>
-                </h3>
+                <div class="slide--title-container">
+                    <a class="slide--link" :href="action.link" @focus="activateSlide(action.key)">
+                      <h3 class="slide--title">
+                          {{action.title}}
+                      </h3>
+                      <div class="box-sideways">
+                        <svg viewBox="0 0 32 32" height="32px" width="32px">
+                          <path
+                            d="M12.70725,15.293 C12.31625,14.902 11.68425,14.902 11.29325,15.293 C10.90225,15.684 10.90225,16.316 11.29325,16.707 L15.29325,20.707 C15.48825,20.902 15.74425,21 16.00025,21 C16.25625,21 16.51225,20.902 16.70725,20.707 L20.70725,16.707 C21.09825,16.316 21.09825,15.684 20.70725,15.293 C20.31625,14.902 19.68425,14.902 19.29325,15.293 L17.00025,17.586 L17.00025,12 C17.00025,11.448 16.55325,11 16.00025,11 C15.44725,11 15.00025,11.448 15.00025,12 L15.00025,17.586 L12.70725,15.293 Z"
+                          />
+                        </svg>
+                      </div>
+                    </a>
+                </div>
                 <p class="slide--text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod</p>
         </div>
 
@@ -105,14 +114,12 @@ export default {
   },
   methods: {
     activateSlide(itemId) {
-      console.log('id',itemId);
       this.$refs.hooper.slideTo(itemId);
     },
     handleSlide(payload){
       this.$refs.hooper.$children[payload.currentSlide].$el.querySelector('.slide--link').focus();
     },
-    handleUpdate(payload){
-      console.log('update', payload);
+    handleUpdate(){
       this.$refs.hooper.updateWidth();
     }
   }
@@ -168,9 +175,16 @@ export default {
       box-shadow: 20px 20px 80px 0px rgba(0, 93, 129, 0.14);
       border-radius: 5px;  
       }
+
+      &:hover {
+        svg {
+          animation: moveArrowSideways 1s ease-in-out 3;
+        }
+      }
   }
 
   &--title {
+    margin:0;
     width: 240px;
     height: 25px;
     color: rgb(9, 51, 63);
@@ -182,6 +196,7 @@ export default {
   }
 
   &--link {
+    display: flex;
     text-decoration: none;
   }
 
@@ -191,4 +206,37 @@ export default {
 
 }
 
+.box-sideways {
+  margin: 0;
+  height: 32px;
+  width: 32px;
+  background: white;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.2s ease-in-out;
+  svg {
+    fill: #b2c2c7;
+    position: absolute;
+    right: 0;
+    transform: translateX(0) rotate(-90deg);
+  }
+}
+
+@keyframes moveArrowSideways {
+  0% {
+    transform: translateX(0) rotate(-90deg);
+  }
+  30% {
+    transform: translateX(30px) rotate(-90deg);
+    opacity: 0;
+  }
+  35% {
+    opacity: 0;
+    transform: translateX(-30px) rotate(-90deg);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0) rotate(-90deg);
+  }
+}
 </style>
