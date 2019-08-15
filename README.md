@@ -27,3 +27,9 @@ npm run lint
 
 ### Customize configuration
 See [Configuration Reference](https://cli.vuejs.org/config/).
+
+### Key Actions CTA - external Vue package used...
+
+https://baianat.github.io/hooper/
+
+need to "npm install" one time before compiling
