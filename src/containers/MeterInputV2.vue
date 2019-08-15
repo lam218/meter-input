@@ -10,8 +10,8 @@
 </template>
 
 <script>
-import VisualRep from './VisualRepresentation';
-import InputWithStatic from './InputWStatic';
+import VisualRep from '../components/VisualRepresentation';
+import InputWithStatic from '../components/InputWStatic';
 
 export default {
   name: 'MeterInputV2',

@@ -25,7 +25,7 @@ export default {
   name: "visual-rep",
   data: function() {
     return {
-      inputValue: [0, 0, 0, 0, 0, ".", 0, 0, 0],
+      inputValue: [0, 0, 0, 0, 0, ".", 0, 0],
       isEditing: false
     };
   },

@@ -6,6 +6,7 @@
     <router-link to="/animations" class="link">Go to SVG animations</router-link>
     <router-link to="/meter-reading" class="link">Go to Meter reading</router-link>
     <router-link to="/meter-reading-v2" class="link">Go to Meter reading v2</router-link>
+    <router-link to="/content-scroll" class="link">Go to Content scroll</router-link>
     <router-view></router-view>
   </p>
   </div>

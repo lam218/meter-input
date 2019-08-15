@@ -17,9 +17,9 @@
 </template>
 
 <script>
-import SeperateInputs from './SeperateInputs';
-import OneInput from './OneInput';
-import LeftToRight from './LeftToRight';
+import SeperateInputs from '../components/SeperateInputs';
+import OneInput from '../components/OneInput';
+import LeftToRight from '../components/LeftToRight';
 
 export default {
   name: 'HelloWorld',

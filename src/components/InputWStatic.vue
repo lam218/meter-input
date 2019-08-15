@@ -9,7 +9,6 @@
           <div class="value value--empty">.</div>
           <div class="value value--red">0</div>
           <div class="value value--red">0</div>
-          <div class="value value--red">0</div>
         </div>
       </div>
     </div>

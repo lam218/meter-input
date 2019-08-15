@@ -1,9 +1,10 @@
 import Vue from "vue";
 import VueRouter from "vue-router";
-import HelloWorld from "./components/HelloWorld.vue";
-import Arrows from "./components/Arrows.vue";
-import Animations from "./components/MoreAnimations.vue";
-import MeterInputV2 from "./components/MeterInputV2.vue";
+import HelloWorld from "./containers/HelloWorld.vue";
+import Arrows from "./containers/Arrows.vue";
+import Animations from "./containers/MoreAnimations.vue";
+import MeterInputV2 from "./containers/MeterInputV2.vue";
+import ContentScroll from "./containers/ContentScroll.vue";
 import App from "./App.vue";
 
 Vue.config.productionTip = false;
@@ -20,7 +21,8 @@ const routes = [
     component: Animations
   },
   { path: "/meter-reading", component: HelloWorld },
-  { path: "/meter-reading-v2", component: MeterInputV2 }
+  { path: "/meter-reading-v2", component: MeterInputV2 },
+  { path: "/content-scroll", component: ContentScroll }
 ];
 const router = new VueRouter({
   routes
