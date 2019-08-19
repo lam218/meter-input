@@ -23,7 +23,7 @@
       Maecenas aliquet sit amet ante id scelerisque. Vestibulum non felis et metus euismod suscipit. Nullam ornare erat sed tortor dictum maximus. Cras erat lorem, mollis vitae erat a, accumsan vulputate nisi. Duis vitae sollicitudin enim. Duis tempus ex sed aliquam mollis. In hac habitasse platea dictumst. Fusce ut pretium quam, eget imperdiet lacus. Duis eget mauris in lacus suscipit finibus egestas ut risus. Quisque eu purus quis dolor iaculis gravida. Nam eu nisl est. In imperdiet justo a dui lobortis, ullamcorper facilisis lorem fringilla.
     </p>
     <div class="content-scroll" ref="content">
-      <div class="content-scroll__text">
+      <div class="content-scroll__text" ref="content-text">
         <h2 class="content-scroll__text-title">A title</h2>
         <p class="content-scroll__text-content">
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam justo neque, venenatis ac varius vitae, aliquam ut nisl. In eu vulputate nunc, et pulvinar quam. In turpis diam, consequat vel dignissim vitae, gravida sit amet augue. In et nulla id felis consectetur venenatis. Aenean a dictum felis, fermentum congue nisl. Nam dictum purus ornare mattis aliquam. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. In sagittis ipsum tortor. Ut nec mi egestas, ornare magna ut, molestie felis. Donec et sagittis risus.
@@ -48,10 +48,30 @@
           Maecenas aliquet sit amet ante id scelerisque. Vestibulum non felis et metus euismod suscipit. Nullam ornare erat sed tortor dictum maximus. Cras erat lorem, mollis vitae erat a, accumsan vulputate nisi. Duis vitae sollicitudin enim. Duis tempus ex sed aliquam mollis. In hac habitasse platea dictumst. Fusce ut pretium quam, eget imperdiet lacus. Duis eget mauris in lacus suscipit finibus egestas ut risus. Quisque eu purus quis dolor iaculis gravida. Nam eu nisl est. In imperdiet justo a dui lobortis, ullamcorper facilisis lorem fringilla.
         </p>
       </div>
-      <div class="content-scroll__image">
-        <img src="http://www.redwoodhikes.com/Humboldt/BigTree3.jpg" />
-      </div>
+      <div class="content-scroll__image"></div>
     </div>
+    <p>
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam justo neque, venenatis ac varius vitae, aliquam ut nisl. In eu vulputate nunc, et pulvinar quam. In turpis diam, consequat vel dignissim vitae, gravida sit amet augue. In et nulla id felis consectetur venenatis. Aenean a dictum felis, fermentum congue nisl. Nam dictum purus ornare mattis aliquam. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. In sagittis ipsum tortor. Ut nec mi egestas, ornare magna ut, molestie felis. Donec et sagittis risus.
+      Sed consequat eget erat non efficitur. Vestibulum porta risus ante, ut dictum odio maximus ut. Donec bibendum pulvinar augue sed convallis. In condimentum vestibulum convallis. Integer blandit laoreet nisi quis facilisis. Suspendisse potenti. Integer eu aliquet risus. Donec vitae magna id justo convallis imperdiet. Fusce accumsan porta porta. Vestibulum porta commodo dapibus. Phasellus feugiat, ipsum sit amet accumsan gravida, est diam volutpat dolor, nec congue purus sem elementum dui.
+      Praesent dictum ipsum vitae odio aliquam, ut imperdiet ipsum commodo. Aenean sollicitudin quam at rhoncus vehicula. Phasellus vitae sem dolor. Integer a volutpat turpis, ac porta turpis. Vivamus consectetur auctor tortor eget ultricies. Ut ultrices cursus justo, at iaculis sapien mollis non. Sed eget tellus id urna dapibus consectetur. Donec porttitor posuere dolor.
+      Nam vulputate, orci eget pulvinar iaculis, eros mi euismod ipsum, sed maximus eros massa in augue. Mauris lacinia nibh at lacus rutrum, at bibendum massa facilisis. Pellentesque sollicitudin congue turpis a auctor. Quisque consectetur dictum tincidunt. Donec sit amet justo non dolor vehicula consectetur ut ut purus. Suspendisse ultricies vulputate vestibulum. Nulla eu aliquet tortor, blandit consectetur eros.
+      Maecenas aliquet sit amet ante id scelerisque. Vestibulum non felis et metus euismod suscipit. Nullam ornare erat sed tortor dictum maximus. Cras erat lorem, mollis vitae erat a, accumsan vulputate nisi. Duis vitae sollicitudin enim. Duis tempus ex sed aliquam mollis. In hac habitasse platea dictumst. Fusce ut pretium quam, eget imperdiet lacus. Duis eget mauris in lacus suscipit finibus egestas ut risus. Quisque eu purus quis dolor iaculis gravida. Nam eu nisl est. In imperdiet justo a dui lobortis, ullamcorper facilisis lorem fringilla.
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam justo neque, venenatis ac varius vitae, aliquam ut nisl. In eu vulputate nunc, et pulvinar quam. In turpis diam, consequat vel dignissim vitae, gravida sit amet augue. In et nulla id felis consectetur venenatis. Aenean a dictum felis, fermentum congue nisl. Nam dictum purus ornare mattis aliquam. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. In sagittis ipsum tortor. Ut nec mi egestas, ornare magna ut, molestie felis. Donec et sagittis risus.
+      Sed consequat eget erat non efficitur. Vestibulum porta risus ante, ut dictum odio maximus ut. Donec bibendum pulvinar augue sed convallis. In condimentum vestibulum convallis. Integer blandit laoreet nisi quis facilisis. Suspendisse potenti. Integer eu aliquet risus. Donec vitae magna id justo convallis imperdiet. Fusce accumsan porta porta. Vestibulum porta commodo dapibus. Phasellus feugiat, ipsum sit amet accumsan gravida, est diam volutpat dolor, nec congue purus sem elementum dui.
+      Praesent dictum ipsum vitae odio aliquam, ut imperdiet ipsum commodo. Aenean sollicitudin quam at rhoncus vehicula. Phasellus vitae sem dolor. Integer a volutpat turpis, ac porta turpis. Vivamus consectetur auctor tortor eget ultricies. Ut ultrices cursus justo, at iaculis sapien mollis non. Sed eget tellus id urna dapibus consectetur. Donec porttitor posuere dolor.
+      Nam vulputate, orci eget pulvinar iaculis, eros mi euismod ipsum, sed maximus eros massa in augue. Mauris lacinia nibh at lacus rutrum, at bibendum massa facilisis. Pellentesque sollicitudin congue turpis a auctor. Quisque consectetur dictum tincidunt. Donec sit amet justo non dolor vehicula consectetur ut ut purus. Suspendisse ultricies vulputate vestibulum. Nulla eu aliquet tortor, blandit consectetur eros.
+      Maecenas aliquet sit amet ante id scelerisque. Vestibulum non felis et metus euismod suscipit. Nullam ornare erat sed tortor dictum maximus. Cras erat lorem, mollis vitae erat a, accumsan vulputate nisi. Duis vitae sollicitudin enim. Duis tempus ex sed aliquam mollis. In hac habitasse platea dictumst. Fusce ut pretium quam, eget imperdiet lacus. Duis eget mauris in lacus suscipit finibus egestas ut risus. Quisque eu purus quis dolor iaculis gravida. Nam eu nisl est. In imperdiet justo a dui lobortis, ullamcorper facilisis lorem fringilla.
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam justo neque, venenatis ac varius vitae, aliquam ut nisl. In eu vulputate nunc, et pulvinar quam. In turpis diam, consequat vel dignissim vitae, gravida sit amet augue. In et nulla id felis consectetur venenatis. Aenean a dictum felis, fermentum congue nisl. Nam dictum purus ornare mattis aliquam. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. In sagittis ipsum tortor. Ut nec mi egestas, ornare magna ut, molestie felis. Donec et sagittis risus.
+      Sed consequat eget erat non efficitur. Vestibulum porta risus ante, ut dictum odio maximus ut. Donec bibendum pulvinar augue sed convallis. In condimentum vestibulum convallis. Integer blandit laoreet nisi quis facilisis. Suspendisse potenti. Integer eu aliquet risus. Donec vitae magna id justo convallis imperdiet. Fusce accumsan porta porta. Vestibulum porta commodo dapibus. Phasellus feugiat, ipsum sit amet accumsan gravida, est diam volutpat dolor, nec congue purus sem elementum dui.
+      Praesent dictum ipsum vitae odio aliquam, ut imperdiet ipsum commodo. Aenean sollicitudin quam at rhoncus vehicula. Phasellus vitae sem dolor. Integer a volutpat turpis, ac porta turpis. Vivamus consectetur auctor tortor eget ultricies. Ut ultrices cursus justo, at iaculis sapien mollis non. Sed eget tellus id urna dapibus consectetur. Donec porttitor posuere dolor.
+      Nam vulputate, orci eget pulvinar iaculis, eros mi euismod ipsum, sed maximus eros massa in augue. Mauris lacinia nibh at lacus rutrum, at bibendum massa facilisis. Pellentesque sollicitudin congue turpis a auctor. Quisque consectetur dictum tincidunt. Donec sit amet justo non dolor vehicula consectetur ut ut purus. Suspendisse ultricies vulputate vestibulum. Nulla eu aliquet tortor, blandit consectetur eros.
+      Maecenas aliquet sit amet ante id scelerisque. Vestibulum non felis et metus euismod suscipit. Nullam ornare erat sed tortor dictum maximus. Cras erat lorem, mollis vitae erat a, accumsan vulputate nisi. Duis vitae sollicitudin enim. Duis tempus ex sed aliquam mollis. In hac habitasse platea dictumst. Fusce ut pretium quam, eget imperdiet lacus. Duis eget mauris in lacus suscipit finibus egestas ut risus. Quisque eu purus quis dolor iaculis gravida. Nam eu nisl est. In imperdiet justo a dui lobortis, ullamcorper facilisis lorem fringilla.
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam justo neque, venenatis ac varius vitae, aliquam ut nisl. In eu vulputate nunc, et pulvinar quam. In turpis diam, consequat vel dignissim vitae, gravida sit amet augue. In et nulla id felis consectetur venenatis. Aenean a dictum felis, fermentum congue nisl. Nam dictum purus ornare mattis aliquam. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. In sagittis ipsum tortor. Ut nec mi egestas, ornare magna ut, molestie felis. Donec et sagittis risus.
+      Sed consequat eget erat non efficitur. Vestibulum porta risus ante, ut dictum odio maximus ut. Donec bibendum pulvinar augue sed convallis. In condimentum vestibulum convallis. Integer blandit laoreet nisi quis facilisis. Suspendisse potenti. Integer eu aliquet risus. Donec vitae magna id justo convallis imperdiet. Fusce accumsan porta porta. Vestibulum porta commodo dapibus. Phasellus feugiat, ipsum sit amet accumsan gravida, est diam volutpat dolor, nec congue purus sem elementum dui.
+      Praesent dictum ipsum vitae odio aliquam, ut imperdiet ipsum commodo. Aenean sollicitudin quam at rhoncus vehicula. Phasellus vitae sem dolor. Integer a volutpat turpis, ac porta turpis. Vivamus consectetur auctor tortor eget ultricies. Ut ultrices cursus justo, at iaculis sapien mollis non. Sed eget tellus id urna dapibus consectetur. Donec porttitor posuere dolor.
+      Nam vulputate, orci eget pulvinar iaculis, eros mi euismod ipsum, sed maximus eros massa in augue. Mauris lacinia nibh at lacus rutrum, at bibendum massa facilisis. Pellentesque sollicitudin congue turpis a auctor. Quisque consectetur dictum tincidunt. Donec sit amet justo non dolor vehicula consectetur ut ut purus. Suspendisse ultricies vulputate vestibulum. Nulla eu aliquet tortor, blandit consectetur eros.
+      Maecenas aliquet sit amet ante id scelerisque. Vestibulum non felis et metus euismod suscipit. Nullam ornare erat sed tortor dictum maximus. Cras erat lorem, mollis vitae erat a, accumsan vulputate nisi. Duis vitae sollicitudin enim. Duis tempus ex sed aliquam mollis. In hac habitasse platea dictumst. Fusce ut pretium quam, eget imperdiet lacus. Duis eget mauris in lacus suscipit finibus egestas ut risus. Quisque eu purus quis dolor iaculis gravida. Nam eu nisl est. In imperdiet justo a dui lobortis, ullamcorper facilisis lorem fringilla.
+    </p>
   </div>
 </template>
 
@@ -67,25 +87,30 @@ export default {
   methods: {
     onScroll(e) {
       let scroll = 0;
+      const currentScroll = document.getElementsByClassName(
+        "content-scroll__text"
+      )[0].scrollTop;
       if (
-        e.layerY > this.$refs.content.offsetTop &&
-        e.layerY <
-          this.$refs.content.offsetHeight + this.$refs.content.offsetTop
+        e.layerY > this.$refs.content.offsetTop ||
+       e.layerY <
+          currentScroll
       ) {
+        document.getElementsByTagName("body")[0].style.overflow = "hidden";
+        document.getElementsByClassName("content-scroll")[0].scrollTop = 0;
         if (e.deltaY < 0) {
-          scroll -= 50;
+          scroll -= 5;
         } else if (e.deltaY > 0) {
-          scroll += 50;
+          scroll += 5;
         }
-        const currentScroll = document.getElementsByClassName(
-          "content-scroll__text"
-        )[0].scrollTop;
+
         document.getElementsByClassName("content-scroll__text")[0].scrollTop =
           currentScroll + scroll;
-      } else {
-        document.getElementsByClassName(
-          "content-scroll__text"
-        )[0].scrollTo(0, 0);
+      }  else {
+        document
+          .getElementsByClassName("content-scroll__text")[0]
+          .scrollTo(0, 0);
+                  document.getElementsByTagName("body")[0].style.overflow = "auto";
+
       }
     }
   }
@@ -99,6 +124,10 @@ export default {
   grid-template-rows: 100vh;
   &__text {
     overflow-y: hidden;
+  }
+  &__image {
+    background: url("http://www.redwoodhikes.com/Humboldt/BigTree3.jpg")
+      no-repeat center;
   }
 }
 </style>
