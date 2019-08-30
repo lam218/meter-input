@@ -7,6 +7,7 @@ import MeterInputV2 from "./containers/MeterInputV2.vue";
 import KeyActions from "./components/KeyActions.vue";
 import ContentScroll from "./containers/ContentScroll.vue";
 import ContentScrollScss from "./containers/ContentScrollScss.vue";
+import GetLocation from './containers/GetLocation.vue';
 
 import App from "./App.vue";
 
@@ -27,7 +28,8 @@ const routes = [
   { path: "/meter-reading-v2", component: MeterInputV2 },
   { path: "/content-scroll", component: ContentScroll },
   { path: "/key-actions", component: KeyActions },
-  { path: "/content-scroll-scss", component: ContentScrollScss }
+  { path: "/content-scroll-scss", component: ContentScrollScss },
+  {path: '/get-location', component: GetLocation}
 ];
 const router = new VueRouter({
   routes

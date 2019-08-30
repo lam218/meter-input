@@ -8,6 +8,7 @@
       <router-link to="/content-scroll" class="link">Go to Content scroll</router-link>
       <router-link to="/content-scroll-scss" class="link">Go to Content scroll scss</router-link>
       <router-link to="/key-actions" class="link">Go to Key Actions CTA</router-link>
+      <router-link to="/get-location" class="link">Get location</router-link>
       <router-view></router-view>
     </p>
   </div>
