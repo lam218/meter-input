@@ -9,11 +9,11 @@
         src="https://2hysc8420x5w1kwim5426evv-wpengine.netdna-ssl.com/wp-content/uploads/2017/12/best-worst-drinks-kids-teeth.jpg"
       />
     </div>
-    <p class="rich-text">
-      Vestibulum id ligula porta felis euismod semper. Donec id elit non mi porta gravida at eget metus. Donec ullamcorper nulla non metus auctor fringilla. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.
-      Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Nullam id dolor id nibh ultricies vehicula ut id elit.
-      Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec sed odio dui. Donec sed odio dui. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
-    </p>
+    <div class="rich-text">
+      <p>Vestibulum id ligula porta felis euismod semper. Donec id elit non mi porta gravida at eget metus. Donec ullamcorper nulla non metus auctor fringilla. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
+      <p>Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+      <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec sed odio dui. Donec sed odio dui. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</p>
+    </div>
     <div class="content-scroll" ref="content" id="content-scroll">
       <div class="content-scroll__text" ref="content-text">
         <h2 class="content-scroll__text-title">A title</h2>
@@ -105,6 +105,7 @@ body {
   padding: 160px 0 120px 0;
   margin: auto;
   max-width: 620px;
+  text-align: left;
 }
 .content-scroll {
   background: url("http://www.redwoodhikes.com/Humboldt/BigTree3.jpg") no-repeat
