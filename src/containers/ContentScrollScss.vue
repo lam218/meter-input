@@ -16,7 +16,7 @@
     </div>
     <div class="content-scroll" ref="content" id="content-scroll">
       <div class="content-scroll__text" ref="content-text">
-        <h2 class="content-scroll__text-title">A title</h2>
+        <h2 class="content-scroll__text-title">Walk on the wild side</h2>
         <div class="content-scroll__text-content">
           <p
             class="main"
