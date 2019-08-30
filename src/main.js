@@ -6,6 +6,7 @@ import Animations from "./containers/MoreAnimations.vue";
 import MeterInputV2 from "./containers/MeterInputV2.vue";
 import KeyActions from "./components/KeyActions.vue";
 import ContentScroll from "./containers/ContentScroll.vue";
+import ContentScrollScss from "./containers/ContentScrollScss.vue";
 
 import App from "./App.vue";
 
@@ -25,7 +26,8 @@ const routes = [
   { path: "/meter-reading", component: HelloWorld },
   { path: "/meter-reading-v2", component: MeterInputV2 },
   { path: "/content-scroll", component: ContentScroll },
-  { path: "/key-actions", component: KeyActions }
+  { path: "/key-actions", component: KeyActions },
+  { path: "/content-scroll-scss", component: ContentScrollScss }
 ];
 const router = new VueRouter({
   routes
