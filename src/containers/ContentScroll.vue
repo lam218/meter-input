@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="outer-div">
     <p>
       Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam justo neque, venenatis ac varius vitae, aliquam ut nisl. In eu vulputate nunc, et pulvinar quam. In turpis diam, consequat vel dignissim vitae, gravida sit amet augue. In et nulla id felis consectetur venenatis. Aenean a dictum felis, fermentum congue nisl. Nam dictum purus ornare mattis aliquam. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. In sagittis ipsum tortor. Ut nec mi egestas, ornare magna ut, molestie felis. Donec et sagittis risus.
       Sed consequat eget erat non efficitur. Vestibulum porta risus ante, ut dictum odio maximus ut. Donec bibendum pulvinar augue sed convallis. In condimentum vestibulum convallis. Integer blandit laoreet nisi quis facilisis. Suspendisse potenti. Integer eu aliquet risus. Donec vitae magna id justo convallis imperdiet. Fusce accumsan porta porta. Vestibulum porta commodo dapibus. Phasellus feugiat, ipsum sit amet accumsan gravida, est diam volutpat dolor, nec congue purus sem elementum dui.
@@ -22,7 +22,7 @@
       Nam vulputate, orci eget pulvinar iaculis, eros mi euismod ipsum, sed maximus eros massa in augue. Mauris lacinia nibh at lacus rutrum, at bibendum massa facilisis. Pellentesque sollicitudin congue turpis a auctor. Quisque consectetur dictum tincidunt. Donec sit amet justo non dolor vehicula consectetur ut ut purus. Suspendisse ultricies vulputate vestibulum. Nulla eu aliquet tortor, blandit consectetur eros.
       Maecenas aliquet sit amet ante id scelerisque. Vestibulum non felis et metus euismod suscipit. Nullam ornare erat sed tortor dictum maximus. Cras erat lorem, mollis vitae erat a, accumsan vulputate nisi. Duis vitae sollicitudin enim. Duis tempus ex sed aliquam mollis. In hac habitasse platea dictumst. Fusce ut pretium quam, eget imperdiet lacus. Duis eget mauris in lacus suscipit finibus egestas ut risus. Quisque eu purus quis dolor iaculis gravida. Nam eu nisl est. In imperdiet justo a dui lobortis, ullamcorper facilisis lorem fringilla.
     </p>
-    <div class="content-scroll" ref="content">
+    <div class="content-scroll" ref="content" id="content-scroll">
       <div class="content-scroll__text" ref="content-text">
         <h2 class="content-scroll__text-title">A title</h2>
         <p class="content-scroll__text-content">
@@ -79,10 +79,10 @@
 export default {
   name: "content-scroll",
   created() {
-    window.addEventListener("wheel", this.onScroll);
+    window.addEventListener("wheel", this.onScroll, { passive: false });
   },
   destroyed() {
-    window.removeEventListener("wheel", this.onScroll);
+    window.removeEventListener("wheel", this.onScroll, { passive: false });
   },
   methods: {
     onScroll(e) {
@@ -91,12 +91,24 @@ export default {
         "content-scroll__text"
       )[0].scrollTop;
       if (
-        e.layerY > this.$refs.content.offsetTop ||
-       e.layerY <
-          currentScroll
+        Math.ceil(currentScroll) ===
+          this.$refs["content-text"].scrollHeight -
+            this.$refs.content.clientHeight ||
+        (e.deltaY < 0 && currentScroll === 0)
       ) {
+        document.getElementsByTagName("body")[0].style.overflow = "auto";
+        if (e.deltaY < 0) {
+          document
+            .getElementsByClassName("content-scroll__text")[0]
+            .scrollTo(0, 0);
+        }
+      } else if (
+        e.layerY > this.$refs.content.offsetTop &&
+        e.layerY <
+          this.$refs.content.offsetTop + this.$refs.content.clientHeight
+      ) {
+        document.getElementById("content-scroll").scrollIntoView();
         document.getElementsByTagName("body")[0].style.overflow = "hidden";
-        document.getElementsByClassName("content-scroll")[0].scrollTop = 0;
         if (e.deltaY < 0) {
           scroll -= 5;
         } else if (e.deltaY > 0) {
@@ -105,12 +117,11 @@ export default {
 
         document.getElementsByClassName("content-scroll__text")[0].scrollTop =
           currentScroll + scroll;
-      }  else {
+      } else {
         document
           .getElementsByClassName("content-scroll__text")[0]
           .scrollTo(0, 0);
-                  document.getElementsByTagName("body")[0].style.overflow = "auto";
-
+        document.getElementsByTagName("body")[0].style.overflow = "auto";
       }
     }
   }
@@ -118,6 +129,10 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+body{
+  scroll-behavior: smooth;
+
+}
 .content-scroll {
   display: grid;
   grid-template-columns: 50% 50%;
