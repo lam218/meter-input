@@ -29,6 +29,9 @@ export default {
     getLocation: function() {
       if (navigator.geolocation) {
         navigator.geolocation.getCurrentPosition(this.showPosition);
+      } else {
+        this.latitude = undefined;
+        this.longitude = undefined;
       }
     },
     showPosition: function(position) {
