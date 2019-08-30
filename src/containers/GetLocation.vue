@@ -1,11 +1,12 @@
 <template>
   <div class="body">
     <div class="body__box">
-      <p>
+      <button v-if="latitude === '' || longitude === ''" v-on:click="getLocation">Get location</button>
+      <p v-if="latitude !== ''">
         The latitude is:
         <span class="bold">{{latitude}}</span>
       </p>
-      <p>
+      <p v-if="longitude !== ''">
         The longitude is:
         <span class="bold">{{longitude}}</span>
       </p>
@@ -22,16 +23,13 @@ export default {
       longitude: ""
     };
   },
-  mounted: function() {
-    this.getLocation();
-  },
   methods: {
     getLocation: function() {
       if (navigator.geolocation) {
         navigator.geolocation.getCurrentPosition(this.showPosition);
       } else {
-        this.latitude = undefined;
-        this.longitude = undefined;
+        this.latitude = "";
+        this.longitude = "";
       }
     },
     showPosition: function(position) {
