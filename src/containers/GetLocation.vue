@@ -10,6 +10,10 @@
         The longitude is:
         <span class="bold">{{longitude}}</span>
       </p>
+      <p>
+        The postcode is:
+        <span class="bold postcode"></span>
+      </p>
     </div>
   </div>
 </template>
@@ -35,6 +39,29 @@ export default {
     showPosition: function(position) {
       this.latitude = position.coords.latitude;
       this.longitude = position.coords.longitude;
+      // eslint-disable-next-line
+      if (google.maps) {
+        // eslint-disable-next-line
+        const geocoder = new google.maps.Geocoder();
+        geocoder.geocode(
+          {
+            location: { lat: this.latitude, lng: this.longitude }
+          },
+          function(results, status) {
+            if (status === "OK") {
+              if (results[0]) {
+                document.getElementsByClassName("postcode")[0].innerHTML =
+                  results[0].address_components[
+                    results[0].address_components.length - 1
+                  ].long_name;
+              } else {
+                // eslint-disable-next-line
+                console.log("nope");
+              }
+            }
+          }
+        );
+      }
     }
   }
 };
