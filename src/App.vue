@@ -9,6 +9,7 @@
       <router-link to="/content-scroll-scss" class="link">Content scroll v2</router-link>
       <router-link to="/key-actions" class="link">Key Actions CTA</router-link>
       <router-link to="/get-location" class="link">Get location</router-link>
+      <router-link to="/dow-triage-poc" class="link">DOW triage POC</router-link>
       <router-view></router-view>
     </p>
   </div>
