@@ -9,6 +9,7 @@ import ContentScroll from "./containers/ContentScroll.vue";
 import ContentScrollScss from "./containers/ContentScrollScss.vue";
 import GetLocation from './containers/GetLocation.vue';
 import DowTriagePoc from "./components/DowTriagePoc.vue";
+import DowTriagePocVal from "./components/DowTriagePocVal.vue";
 import DowTriagePocNext from "./components/DowTriagePocNext.vue";
 
 import App from "./App.vue";
@@ -33,6 +34,7 @@ const routes = [
   { path: "/content-scroll-scss", component: ContentScrollScss },
   { path: '/get-location', component: GetLocation},
   { path: '/dow-triage-poc', component: DowTriagePoc},
+  { path: '/dow-triage-poc-val', component: DowTriagePocVal},
   { path: '/dow-triage-poc-next', name: 'dow-triage-poc-next', component: DowTriagePocNext}
 ];
 const router = new VueRouter({
