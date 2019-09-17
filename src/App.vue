@@ -10,6 +10,7 @@
       <router-link to="/key-actions" class="link">Key Actions CTA</router-link>
       <router-link to="/get-location" class="link">Get location</router-link>
       <router-link to="/dow-triage-poc" class="link">DOW triage POC</router-link>
+      <router-link to="/dow-triage-poc-val" class="link">DOW triage POC (validation)</router-link>
       <router-view></router-view>
     </p>
   </div>
