@@ -112,7 +112,6 @@
             <div class="fieldset__actions">
               <input type="button" value="Next"  class=" button button--next primary-button fieldset__button" v-on:click="handleNext()" />
             </div>
-            <h2>{{ enableNext }}</h2>
           </div>
         </form>
       </div> <!-- page__content -->
