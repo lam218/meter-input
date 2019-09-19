@@ -32,7 +32,7 @@
                   <div class="field__content">
                     <div class="dropdown">
                       <select class="dropdown__select" id="q2" name="q2" v-on:change="handleQ2" v-on:blur="handleOnBlur" required>
-                        <option value="" disabled>Please select...</option>
+                        <option value="" selected disabled>Please select...</option>
                         <option value="100">100 - 150mm</option>
                         <option value="225">225mm</option>
                         <option value="300">300mm or larger</option>
