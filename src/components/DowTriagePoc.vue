@@ -235,7 +235,7 @@ export default {
       });
     },
     handleOnBlur() {
-      this.validateForm();
+      if (!this.vq2) this.validateForm();
     },
     validateForm() {
       const elements = document.getElementById('dowForm').querySelectorAll("[required]");
