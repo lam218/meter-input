@@ -178,7 +178,6 @@ export default {
       this.status = 0;
     },
     handleSelectCase(status, caseNumber) {
-
       this.$router.push({ 
         name: 'case-overview', 
         params: { 

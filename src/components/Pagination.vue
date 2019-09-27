@@ -27,7 +27,7 @@ export default {
 }
 </script>
 
-<style lang="scss">
+<style scoped lang="scss">
 .pagination {
   display: flex;
   width: 100%;

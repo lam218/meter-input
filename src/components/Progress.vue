@@ -171,13 +171,7 @@ export default {
 }
 </script>
 
-<style lang="scss">
-.temp-page-container-class {
-  max-width: 1000px;
-  margin: 10rem auto 0 auto;
-  padding: 0 1rem;
-}
-
+<style scoped lang="scss">
 .progress {
   padding: 3.625rem 1.25rem;
   background-color: #ebeff1;

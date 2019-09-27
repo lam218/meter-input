@@ -1,9 +1,9 @@
 <template>
   <div class="action">
     <div class="action__content">
-      <h4 class="action__title">{{ title}}</h4>
+      <h4 class="action__title">{{ title }}</h4>
       <div class="action__description">
-        {{ description}}
+        {{ description }}
       </div>
     </div>
     <div class="action__actions">
