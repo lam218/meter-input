@@ -30,7 +30,7 @@
             </svg>
           </a>
           <ul class="cases__list">
-            <li class="cases__item" v-for="item in filteredList">
+            <li class="cases__item" v-for="(item, index) in filteredList" :key="index">
               <Case 
                 v-bind="item"
                 :handleSelectCase="handleSelectCase"
@@ -177,12 +177,13 @@ export default {
       this.searchTerm = '';
       this.status = 0;
     },
-    handleSelectCase(status) {
+    handleSelectCase(status, caseNumber) {
 
       this.$router.push({ 
         name: 'case-overview', 
         params: { 
           status: status,
+          caseNumber: caseNumber,
         } 
       });
     },

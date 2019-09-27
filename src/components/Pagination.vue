@@ -49,6 +49,10 @@ export default {
       border-color: #0072bc;
       cursor: pointer;
     }
+
+    &:focus {
+      outline-color: transparent;
+    }
   }
 
   &__page {
