@@ -15,17 +15,17 @@
     <div class="filters__filtersBody" :class="{ active: showFilters }">
       <div class="filters__filtersContainer">
         <div class="filters__filtersCol">
-          <label class="filters__label">
+          <label class="filters__label" for="searchTermInput">
             Search by name or ID:
           </label>
-          <input v-model="searchTermValue" class="input" />
+          <input id="searchTermInput" v-model="searchTermValue" class="input" />
         </div>
         <div class="filters__filtersCol">
-          <label class="filters__label">
+          <label class="filters__label" for="searchTermInput">
             Filter by status:
           </label>
           <div class="dropdown">
-            <select v-model.number="statusValue" class="dropdown__select">
+            <select v-model.number="statusValue" class="dropdown__select" id="searchTermInput">
               <option value="0" selected>All cases</option>
               <option value="1">Action required</option>
               <option value="2">Pending</option>
