@@ -138,7 +138,7 @@ export default {
       this[type] = value
     },
     fetchData() {
-      axios.get('http://www.mocky.io/v2/5d88969d330000b611d7d9ef')
+      axios.get('https://www.mocky.io/v2/5d88969d330000b611d7d9ef')
       .then(response => {
         if (response.status === 200) {
           this.payload = this.sortData(response.data.payload);
