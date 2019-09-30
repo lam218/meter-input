@@ -66,6 +66,7 @@ export default {
     }
   }
 
+  // Action required
   &--1 {
     background-color: #fef3e8;
     color: #f68b1f;
@@ -76,6 +77,7 @@ export default {
     }
   }
 
+  // Recieved expression of interest
   &--2 {
     background-color: #e8f3ec;
     color: #1a8c44;
@@ -86,6 +88,7 @@ export default {
     }
   }
 
+  // Completed and rejected
   &--3,
   &--4 {
     background-color: #ebeff1;
@@ -97,6 +100,7 @@ export default {
     }
   }
 
+  // Cancelled
   &--5 {
     background-color: #fdefee;
     color: #f15f56;

@@ -1,23 +1,29 @@
 <template>
   <div class="filters">
-    <button v-on:click="toggleFilters" class="filters__toggle"> 
+    <button @click="toggleFilters" class="filters__toggle"> 
       <div class="cases_toggleShowing">
         Showing: <b> {{ statusMessage }}</b>
         <span v-if="searchTerm"> matching <b>{{ searchTerm }}</b></span>
       </div>
       <div class="filters__toggleLabel">
         <span class="filters__toggleLabelText">Search cases </span>
-        <svg class="filters__toggleIcon"  v-bind:class="{ active: showFilters }"  viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
+        <svg class="filters__toggleIcon" :class="{ active: showFilters }"  viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
           <path d="M12.4536518,8.69541757 C11.8487827,8.07880352 11.8487827,7.0790746 12.4536518,6.46246054 C13.0585208,5.84584649 14.0392073,5.84584649 14.6440763,6.46246054 L24,16.0000526 L14.6441796,25.5375395 C14.0393105,26.1541535 13.0586241,26.1541535 12.453755,25.5375395 C11.848886,24.9209254 11.848886,23.9211965 12.453755,23.3045824 L19.619151,16.0000526 L12.4536518,8.69541757 Z" fill="currentColor"></path>
         </svg>
         </div>
     </button>
-    <div class="filters__filtersBody" v-bind:class="{ active: showFilters }">
+    <div class="filters__filtersBody" :class="{ active: showFilters }">
       <div class="filters__filtersContainer">
         <div class="filters__filtersCol">
+          <label class="filters__label">
+            Search by name or ID:
+          </label>
           <input v-model="searchTermValue" class="input" />
         </div>
         <div class="filters__filtersCol">
+          <label class="filters__label">
+            Filter by status:
+          </label>
           <div class="dropdown">
             <select v-model.number="statusValue" class="dropdown__select">
               <option value="0" selected>All cases</option>
@@ -101,6 +107,7 @@ export default {
 
   &__filtersCol {
     display: flex;
+    flex-flow: column;
     width: 100%;
     padding: 0 0.5rem;
 
@@ -113,7 +120,16 @@ export default {
     @media (min-width: 768px) {
       width: 33.3333%;
       justify-content: flex-end;
-      align-items: center;
+      align-items: flex-end;
+    }
+  }
+
+  &__label {
+    flex: 0 0 auto;
+    width: 100%;
+
+    & + * {
+      margin-top: 0.5rem;
     }
   }
 
@@ -148,6 +164,10 @@ export default {
       justify-content: space-between;
       align-items: center;
       flex-flow: row;
+    }
+
+    &:focus {
+      outline-color: transparent;
     }
   }
 

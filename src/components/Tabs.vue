@@ -39,7 +39,7 @@ export default {
   methods: {
     selectTab(selectedTab) {
       this.tabs.forEach(tab => {
-        tab.isActive = (tab.tabId == selectedTab.tabId);
+        tab.isActive = (tab.tabId === selectedTab.tabId);
       });
     }
   }

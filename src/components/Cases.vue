@@ -98,8 +98,8 @@ export default {
       });
 
       // Status filter
-      const filteredList = parseInt(this.status) !== 0 
-      ? searchedList.filter(item => item.status === parseInt(this.status))
+      const filteredList = this.status !== 0 
+      ? searchedList.filter(item => item.status === this.status)
       : searchedList;
 
       // Pagination
@@ -207,7 +207,7 @@ export default {
   .dropdown {
     width: 100%;
 
-    .dropdown__select {
+    &__select {
       border-width: 1px;
       border-color: #65858f;
     }

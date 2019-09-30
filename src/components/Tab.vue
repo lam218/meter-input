@@ -12,7 +12,6 @@ export default {
       required: true,
       type: String,
     },
-
     selected: {
       default: false,
       type: Boolean,
